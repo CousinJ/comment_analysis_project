@@ -1,0 +1,63 @@
+
+:root {
+    --background-one: rgb(27, 27, 27);
+    --background-two: rgb(105, 105, 105);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-one);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  user-select: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 12vw;
+}
+
+nav a {
+  color: #fff;
+  text-decoration:none;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+input {
+ 
+margin: 50px;
+}
+/* custom classes style========================================= */
+.content-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  height: 80vh;
+  
+}
+.result-container {
+  width: 78vw;
+  height: 58vh;
+  background-color: #333;
+border-style: ridge;
+border-color: black;
+border-width: 4px;
+}

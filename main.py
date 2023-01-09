@@ -73,7 +73,7 @@ def topCommentGetter(top_x):
         lesser_comments.append(sortedByLikes[x])
     
     
-    
+
     
     
    
@@ -86,7 +86,7 @@ topCommentGetter(10)
 
 
 
-def top_lesser_R_getter():
+def clean_comments():
     #clean comments
     top_cmnts_clean = []
     for item in top_comments:
@@ -98,10 +98,10 @@ def top_lesser_R_getter():
         clean_item = item['text'].casefold()
         clean_item = regex.sub('', clean_item)
         lesser_cmnts_clean.append(clean_item.split(' '))
-    print(top_cmnts_clean)
-               
+   
 
 
 
 
-top_lesser_R_getter()
+
+
