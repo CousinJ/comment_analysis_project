@@ -2,7 +2,9 @@ from googleapiclient.discovery import build
 import os
 import re
 from dotenv import load_dotenv
+
 load_dotenv()
+
 
 
 regex = re.compile('[,\.!?]')
@@ -29,7 +31,7 @@ def loadText(response):
         commentStats.append(commentDict)
       
 
-#function returns the comment thread on a page given the page parmeter
+#function returns the comment thread on a page given the page parmeter and video parameter
 def getCommentThreads(page):
     request = youtube_service_object.commentThreads().list(part='snippet', videoId=videoId, maxResults=100, textFormat='plainText', pageToken=page)
     response = request.execute()
@@ -38,6 +40,7 @@ def getCommentThreads(page):
 
 
 #getting text from the function for the FIRST TIME
+
 commentHelper = getCommentThreads('')
 next_page_token = commentHelper['nextPageToken']
 loadText(commentHelper)
@@ -78,13 +81,13 @@ def topCommentGetter(top_x):
     
    
 
-
+#calling the top comment getter with arg num.
 topCommentGetter(10)
 
 
 
 
-
+#for text analyzing data better
 
 def clean_comments():
     #clean comments
@@ -102,6 +105,6 @@ def clean_comments():
 
 
 
-
+#flask
 
 

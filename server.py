@@ -1,5 +1,5 @@
-from flask import Flask, redirect, url_for, render_template
-
+from flask import Flask, redirect, url_for, render_template,request
+import funcs
 app = Flask(__name__)
 #PRACTICE WITH FLASK
 # @app.route('/')
@@ -14,8 +14,11 @@ app = Flask(__name__)
 # def admin():
 #     return redirect(url_for('title'))
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def home():
+    if request.method == "POST":
+        anything = request.form.get('anything')
+        print(anything)
     return render_template('home.html')
 
 
