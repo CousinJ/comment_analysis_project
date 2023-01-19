@@ -1,6 +1,7 @@
 from googleapiclient.discovery import build
 import os
 import re
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -10,6 +11,7 @@ load_dotenv()
 regex = re.compile('[,\.!?]')
 #video Id 
 videoId = 'H9AAnV59ddE'
+
 youtube_service_object = build('youtube', 'v3', developerKey=os.getenv('API_KEY'))
 #sorts through list of dicts based on likes 
 
@@ -105,6 +107,8 @@ def clean_comments():
 
 
 
-#flask
+#print
+
+print(top_comments)
 
 
