@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    
+
+ 
+
+    <title>Page</title>
+</head>
+<body>
+    <div class="content-container">
+        <nav>
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="/about">about</a></li>
+                
+            </ul>
+        </nav>
+        <div class="about-container">
+            <h2>Youtube Comment App</h2>
+            <div class="info-container">
+                <p>This project was created using the flask microframework in python. It uses the Youtube Data Api v3 to extract the information from youtube. 
+                    The user will be prompted to enter a video ID and also a number of top comments to show. If given these parameters and submitted, the system will sort all the comments of that video and return the top comments of the video. 
+                    Note: the more comments on a video, the longer the process takes to sort. Only press submit one time or reset the parameters by clicking home on the nav bar.
+                    
+                </p>
+                
+            </div>
+            
+        </div>
+
+    </div>
+    <footer></footer>
+</body>
+</html>
